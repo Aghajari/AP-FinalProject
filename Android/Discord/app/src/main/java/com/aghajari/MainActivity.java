@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(v.getContext(), "Username must be at least 5 characters!", Toast.LENGTH_SHORT).show();
                 return;
             }
-            if (name.length() < 6) {
+            if (pass.length() < 6) {
                 Toast.makeText(v.getContext(), "Password must be at least 6 characters!", Toast.LENGTH_SHORT).show();
                 return;
             }
