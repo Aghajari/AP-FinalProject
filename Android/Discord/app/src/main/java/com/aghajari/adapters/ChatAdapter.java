@@ -381,7 +381,10 @@ public class ChatAdapter extends BaseAdapter<BaseAdapter.VH> {
     }
 
     public boolean notifyNewMessage(MessageModel model) {
-        if (model.fromId.equals(id) || model.toId.equals(id)) {
+        if ((model.fromId.equals(id) && model.toId.equals(MyInfo.getInstance().getId()))
+                || (model.fromId.equals(MyInfo.getInstance().getId()) && model.toId.equals(id))
+                || (model.toId.contains("#") && model.toId.equals(id))) {
+
             String key = String.valueOf(model.index);
             MessageInfo inf = messages.get(key);
 

@@ -466,7 +466,10 @@ public class ChatFragment {
         animator.start();
     }
 
-    void notifyNewMessage(MessageModel model) {
+    boolean notifyNewMessage(MessageModel model) {
+        if (adapter == null)
+            return false;
+
         try {
             boolean scrollToEnd = false;
             try {
@@ -478,6 +481,7 @@ public class ChatFragment {
                 Utils.ui(() -> view.chat_rv.smoothScrollToPosition(adapter.size() - 1));
         } catch (Exception ignore) {
         }
+        return model.fromId.equals(adapter.getId()) || model.toId.equals(adapter.getId());
     }
 
     void notifyTyping(IsTypingModel.IsTypingResponse model) {

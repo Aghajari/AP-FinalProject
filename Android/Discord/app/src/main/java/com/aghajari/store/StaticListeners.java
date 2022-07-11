@@ -12,7 +12,7 @@ public class StaticListeners {
     public static Updater updateMyProfile;
     public static Updater updateOnlineStatus;
     public static GenericUpdater<FriendshipModel> friendshipUpdater;
-    public static GenericUpdater<MessageModel> messageUpdater;
+    public static ResponseUpdater<MessageModel, Boolean> messageUpdater;
     public static GenericUpdater<IsTypingModel.IsTypingResponse> isTypingUpdater;
     public static GenericUpdater<UserModel> updateBlockUnblock;
     public static GenericUpdater<UserModel> updateProfileBlockUnblock;
@@ -27,4 +27,7 @@ public class StaticListeners {
         void update(T t);
     }
 
+    public interface ResponseUpdater<T, R> {
+        R update(T t);
+    }
 }

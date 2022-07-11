@@ -9,8 +9,10 @@ import com.aghajari.api.ApiService;
 import com.aghajari.api.SocketApi;
 import com.aghajari.models.MyInfo;
 import com.aghajari.shared.SocketEvents;
+import com.aghajari.shared.models.MessageModel;
 import com.aghajari.shared.models.ServerModel;
 import com.aghajari.shared.models.UserModel;
+import com.aghajari.views.NotificationCenter;
 import com.aghajari.views.Utils;
 
 public class SocketListeners {
@@ -63,8 +65,14 @@ public class SocketListeners {
         });
 
         SocketApi.getInstance().register(SocketEvents.MESSAGE_NOTIFY, model -> {
+            MessageModel msg = model.get();
+            boolean notify = true;
             if (StaticListeners.messageUpdater != null)
-                StaticListeners.messageUpdater.update(model.get());
+                notify = !StaticListeners.messageUpdater.update(msg);
+
+            System.out.println(notify);
+            if (notify)
+                NotificationCenter.notify(msg);
         });
 
         SocketApi.getInstance().register(SocketEvents.IS_TYPING, model -> {

@@ -36,6 +36,7 @@ import com.aghajari.shared.models.ServerModel;
 import com.aghajari.shared.models.UserModel;
 import com.aghajari.store.EasyApi;
 import com.aghajari.store.StaticListeners;
+import com.aghajari.views.NotificationCenter;
 import com.aghajari.views.PermissionUtils;
 import com.aghajari.views.Utils;
 import com.bumptech.glide.Glide;
@@ -224,6 +225,7 @@ public class ProfileFragment extends BaseFragment<profile_fragment> {
             view.chat_parent.setVisibility(View.GONE);
 
         } else if (profile instanceof UserModel) {
+            NotificationCenter.cancel((UserModel) profile);
             view.profile_click.setText("\uea1d");
 
             view.request_friend.setVisibility(View.VISIBLE);

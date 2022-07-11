@@ -9,6 +9,7 @@ import com.aghajari.shared.models.MessageModel;
 import com.aghajari.shared.models.ServerModel;
 import com.aghajari.shared.models.UserModel;
 import com.aghajari.store.EasyApi;
+import com.aghajari.ui.HomeController;
 import com.aghajari.ui.StaticListeners;
 import com.aghajari.util.PermissionUtils;
 import com.aghajari.util.Utils;
@@ -187,6 +188,11 @@ public class Chat extends AbstractContentCreator<Pane> {
         return true;
     }
 
+    @Override
+    public boolean isChatPage() {
+        return true;
+    }
+
     public void load() {
         StaticListeners.messageUpdater = this::notifyNewMessage;
         StaticListeners.isTypingUpdater = this::notifyTyping;
@@ -282,8 +288,11 @@ public class Chat extends AbstractContentCreator<Pane> {
         }
     }
 
-    void notifyNewMessage(MessageModel model) {
-        if (model.fromId.equals(id) || model.toId.equals(id)) {
+    boolean notifyNewMessage(MessageModel model) {
+        if ((model.fromId.equals(id) && model.toId.equals(MyInfo.getInstance().getId()))
+                || (model.fromId.equals(MyInfo.getInstance().getId()) && model.toId.equals(id))
+                || (model.toId.contains("#") && model.toId.equals(id))) {
+
             if (messages.containsKey(model.index)) {
                 ChatViewModel vm = messages.get(model.index);
                 vm.model = model;
@@ -294,7 +303,9 @@ public class Chat extends AbstractContentCreator<Pane> {
                 messages.put(model.index, vm);
                 addMessage(vm, true);
             }
+            return HomeController.isOnChatPage;
         }
+        return false;
     }
 
     void checkForScrollToEnd(MFXScrollPane scroll) {

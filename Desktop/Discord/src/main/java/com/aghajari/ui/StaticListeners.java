@@ -13,7 +13,7 @@ public class StaticListeners {
     public static Updater updateFriendshipList;
     public static Updater updatePendingFriendshipList;
     public static GenericUpdater<FriendshipModel> friendshipUpdater;
-    public static GenericUpdater<MessageModel> messageUpdater;
+    public static ResponseUpdater<MessageModel, Boolean> messageUpdater;
     public static GenericUpdater<IsTypingModel.IsTypingResponse> isTypingUpdater;
     public static GenericUpdater<UserModel> updateBlockUnblock;
     public static GenericUpdater<UserModel> updateProfile;

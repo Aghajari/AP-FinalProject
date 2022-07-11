@@ -8,6 +8,7 @@ import com.aghajari.shared.models.UserModel;
 import com.aghajari.store.StaticStorage;
 import com.aghajari.ui.contents.*;
 import com.aghajari.util.Animations;
+import com.aghajari.util.NotificationCenter;
 import com.aghajari.util.Utils;
 import io.github.palexdev.materialfx.controls.MFXScrollPane;
 import javafx.animation.KeyFrame;
@@ -44,6 +45,8 @@ public class HomeController {
     @FXML
     public AnchorPane content;
     public AnchorPane item_content = new AnchorPane();
+    @FXML
+    public AnchorPane notification;
 
     private Pane selected, selectedItem;
     private int selectedItemIndex = 1, selectedIndex = 1;
@@ -103,6 +106,8 @@ public class HomeController {
     }
 
     public void initNow() {
+        NotificationCenter.init(notification);
+
         item_content.prefWidthProperty().bind(items.widthProperty());
         items.setContent(item_content);
         items.hvalueProperty().addListener(new ChangeListener<>() {
@@ -122,6 +127,7 @@ public class HomeController {
     public static boolean keepOldIndex = false;
     public static boolean forceUpdate = false;
     public static boolean isOnEditPage = false;
+    public static boolean isOnChatPage = false;
 
     private void createChats() {
         if (isOnEditPage && keepOldIndex && !forceUpdate) {

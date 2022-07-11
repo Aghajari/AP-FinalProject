@@ -256,8 +256,19 @@ public class SocketApi {
                         OnlineUsers.openChat(model.toId, openedChatModel);
                     }
                 }
-                OnlineUsers.sendMessage(thread, model);
                 BotHandler.sendMessage(thread, model);
+
+                MessageModel model2 = new MessageModel();
+                model2.fromId = model.fromId;
+                model2.toId = model.toId;
+                model2.reactions = model.reactions;
+                model2.text = model.text;
+                model2.time = model.time;
+                model2.index = model.index;
+                model2.edited = model.edited;
+                model2.seen = model.seen;
+                model2.setUser(model.getUser());
+                OnlineUsers.sendMessage(thread, model2);
                 return model;
             }
         }
@@ -266,8 +277,13 @@ public class SocketApi {
 
     public static void reaction(UserThread thread, Integer index, Integer reaction) {
         MessageModel model = Connection.getMessage().reaction(index, thread.getClientId(), reaction);
-        if (model != null)
+        if (model != null) {
+            try {
+                model.setUser(ApiService.getData(thread.getToken(), model.fromId));
+            } catch (IOException ignore) {
+            }
             OnlineUsers.sendMessage(thread, model);
+        }
     }
 
     public static void blockUser(UserThread thread, String id) {

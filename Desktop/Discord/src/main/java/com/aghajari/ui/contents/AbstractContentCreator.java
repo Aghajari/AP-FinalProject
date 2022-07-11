@@ -16,6 +16,7 @@ public abstract class AbstractContentCreator<T extends Node> implements ContentC
 
     @Override
     public Node create() throws IOException {
+        HomeController.isOnChatPage = isChatPage();
         HomeController.isOnEditPage = isEditablePage();
         StaticListeners.updateProfileContent = getProfileContentUpdater();
 
@@ -32,6 +33,10 @@ public abstract class AbstractContentCreator<T extends Node> implements ContentC
     }
 
     public boolean isEditablePage(){
+        return false;
+    }
+
+    public boolean isChatPage() {
         return false;
     }
 

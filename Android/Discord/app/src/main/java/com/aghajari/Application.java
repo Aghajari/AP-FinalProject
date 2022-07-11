@@ -3,6 +3,7 @@ package com.aghajari;
 import android.content.Context;
 
 import com.aghajari.rlottie.AXrLottie;
+import com.aghajari.views.NotificationCenter;
 
 public class Application extends android.app.Application {
 
@@ -13,6 +14,7 @@ public class Application extends android.app.Application {
         super.onCreate();
         AXrLottie.init(this);
         context = this;
+        NotificationCenter.createNotificationChannel();
     }
 
 }

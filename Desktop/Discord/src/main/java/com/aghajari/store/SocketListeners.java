@@ -11,6 +11,7 @@ import com.aghajari.shared.models.ServerModel;
 import com.aghajari.shared.models.UserModel;
 import com.aghajari.ui.HomeController;
 import com.aghajari.ui.StaticListeners;
+import com.aghajari.util.NotificationCenter;
 import com.aghajari.util.Toast;
 import javafx.application.Platform;
 import javafx.stage.Stage;
@@ -77,11 +78,20 @@ public class SocketListeners {
         });
 
         SocketApi.getInstance().register(SocketEvents.MESSAGE_NOTIFY, model -> {
-            if (StaticListeners.messageUpdater != null)
+
+            if (StaticListeners.messageUpdater != null) {
                 Platform.runLater(() -> {
+                    boolean notify = true;
+
                     if (StaticListeners.messageUpdater != null)
-                        StaticListeners.messageUpdater.update(model.get());
+                        notify = !StaticListeners.messageUpdater.update(model.get());
+
+                    if (notify)
+                        NotificationCenter.notify(model.get());
                 });
+            } else {
+                NotificationCenter.notify(model.get());
+            }
         });
 
         SocketApi.getInstance().register("getMyFriends", model -> {
