@@ -74,7 +74,7 @@ echo json_encode([
 ?>
 ```
 
-[dictionary.php]() source code.
+[dictionary.php](./Bot/dictionary.php) source code.
 
 <details><summary><b>Bot Api Document</b></summary>
 <p>
