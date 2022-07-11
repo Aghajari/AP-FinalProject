@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<AnchorPane id="home" prefHeight="630" prefWidth="1000" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aghajari.ui.HomeController">
+
+    <MFXScrollPane fx:id="chats"
+                   fitToWidth="true"
+                   maxHeight="630" minHeight="630" maxWidth="230" minWidth="230"/>
+
+    <MFXScrollPane fx:id="items"
+                   layoutX="230"
+                   fitToWidth="true"
+                   maxHeight="630"
+                   minHeight="630"
+                   maxWidth="185"
+                   minWidth="185"
+                   style="-fx-background-color: #2F3136"/>
+
+    <AnchorPane fx:id="content"
+                style="-fx-background-color: #37393E"
+                layoutX="415"
+                minWidth="585"
+                maxWidth="585"
+                minHeight="630"
+                maxHeight="630"/>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<AnchorPane prefHeight="140" prefWidth="400" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #37393E; -fx-background-radius: 16">
+
+    <Label id="text"
+           minWidth="400"
+           layoutY="25"
+           alignment="CENTER" text="Are you sure you want to log out?"
+           textFill="white" style="-fx-font-size: 18"/>
+
+    <MFXButton id="btn"
+               buttonType="RAISED"
+               layoutX="100"
+               layoutY="85"
+               styleClass="outline-button" minHeight="35.0" minWidth="200.0"
+               text="LogOut"/>
+</AnchorPane>

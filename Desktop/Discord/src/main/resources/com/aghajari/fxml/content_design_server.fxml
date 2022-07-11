@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXRippler?>
+
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <BorderPane prefHeight="55" prefWidth="585">
+        <right>
+            <HBox spacing="4" prefHeight="55" alignment="CENTER">
+                <padding>
+                    <Insets right="24"/>
+                </padding>
+                <Label id="apply" text="Apply" textFill="white" styleClass="design-item"
+                       alignment="CENTER" prefHeight="40">
+                    <padding>
+                        <Insets left="12" right="12"/>
+                    </padding>
+                </Label>
+            </HBox>
+        </right>
+    </BorderPane>
+    <Label layoutX="24" textFill="white" text="Design Your Server" minHeight="55"/>
+
+    <Pane style="-fx-background-color: #2F3136" layoutY="55"
+          minHeight="1" maxHeight="1" prefWidth="585"/>
+
+    <MFXScrollPane id="scroll" layoutY="56" maxHeight="574"
+                   minWidth="600" maxWidth="600" hbarPolicy="NEVER"/>
+
+    <Label id="btn"
+           alignment="CENTER"
+           layoutX="500"
+           layoutY="545"
+           styleClass="call"
+           style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #1763c6ff 0.0%, #5ed3f7ff 100.0%);"
+           prefWidth="60" prefHeight="60"/>
+
+    <JFXRippler id="ripple" layoutX="500" styleClass="jfx-rippler2"
+                layoutY="545">
+        <Label prefWidth="60" prefHeight="60"/>
+    </JFXRippler>
+</AnchorPane>

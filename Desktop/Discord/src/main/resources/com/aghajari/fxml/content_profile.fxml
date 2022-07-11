@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <MFXScrollPane prefHeight="630" prefWidth="585">
+        <AnchorPane prefWidth="580">
+
+            <AnchorPane prefWidth="537" prefHeight="400"
+                        layoutY="24" layoutX="24"
+                        style="-fx-background-radius: 16; -fx-background-color: #202225;">
+
+                <Pane id="bg" styleClass="header_bg"
+                      layoutX="2" layoutY="2" prefWidth="533" prefHeight="98"/>
+
+                <Pane style="-fx-background-color: #202225; -fx-background-radius: 90;"
+                      prefWidth="90" prefHeight="90"
+                      layoutX="24" layoutY="75"/>
+
+                <ImageView id="avatar" layoutX="29" layoutY="80"
+                           fitWidth="80" fitHeight="80"/>
+
+                <Label id="avatar_edit" layoutX="29" layoutY="80"
+                       prefWidth="80" prefHeight="80"
+                       alignment="CENTER" visible="false"
+                       text="Edit"
+                       textFill="white"
+                       style="-fx-background-color: #00000080; -fx-background-radius: 80; -fx-font-size: 20;"/>
+
+                <Pane id="online" layoutX="88" layoutY="140" visible="false"
+                      prefWidth="20" prefHeight="20"
+                      style="-fx-background-color: green; -fx-background-radius: 24;
+-fx-border-width: 4; -fx-border-color: #202225; -fx-border-radius: 24; -fx-border-insets: -1;"/>
+
+                <Label layoutY="108" layoutX="124"
+                       id="name"
+                       textFill="white"
+                       style="-fx-font-family: MyFontBold; -fx-font-size: 22"/>
+
+                <AnchorPane style="-fx-background-color: #2F3136; -fx-background-radius: 16"
+                            prefWidth="513" prefHeight="208"
+                            layoutX="12" layoutY="180">
+
+                    <VBox spacing="16" layoutX="16" layoutY="12" prefWidth="481" prefHeight="176"
+                          alignment="CENTER_LEFT">
+                        <HBox spacing="20">
+                            <VBox spacing="4" maxWidth="400" minWidth="400">
+                                <Label textFill="gray" text="USERNAME"
+                                       style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                                <Label id="username" textFill="white" style="-fx-font-size: 16;"/>
+                            </VBox>
+
+                            <MFXButton id="edit_username"
+                                       translateY="1"
+                                       styleClass="mfx-button2"
+                                       buttonType="RAISED"
+                                       minHeight="35.0" minWidth="60.0"
+                                       text="Edit"/>
+                        </HBox>
+
+                        <VBox spacing="4">
+                            <Label textFill="gray" text="NAME" style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                            <Label id="full_name" textFill="white" style="-fx-font-size: 16;"/>
+                        </VBox>
+
+                        <VBox spacing="4">
+                            <Label textFill="gray" text="EMAIL"
+                                   style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                            <Label id="email" textFill="white" style="-fx-font-size: 16;"/>
+                        </VBox>
+                    </VBox>
+                </AnchorPane>
+            </AnchorPane>
+
+            <Label id="changePassword" prefWidth="262.5" prefHeight="60"
+                    layoutY="436" layoutX="24"
+                   styleClass="label_hover"
+                        style="-fx-background-radius: 16; -fx-background-color: #2F3136; -fx-font-size: 18;"
+                   text="Change Password" alignment="CENTER"/>
+
+            <Label id="logOut" prefWidth="260.5" prefHeight="60"
+                   layoutY="436" layoutX="304.5"
+                   styleClass="logout_hover"
+                   style="-fx-font-size: 18;"
+                   text="LogOut" alignment="CENTER"/>
+        </AnchorPane>
+    </MFXScrollPane>
+</AnchorPane>

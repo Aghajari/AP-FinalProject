@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXRippler?>
+<AnchorPane prefWidth="537" prefHeight="56"
+            styleClass="design-item">
+
+    <TextField id="edt" promptText="Channel Name" layoutX="12" layoutY="12"
+               minWidth="400" maxWidth="400" prefHeight="32"
+               style="-fx-prompt-text-fill: gray; -fx-background-color: transparent;
+         -fx-text-fill: white; -fx-font-size: 18; -fx-font-family: MyFont"/>
+
+    <Label id="drag" layoutX="507" alignment="CENTER" minHeight="56"/>
+
+    <AnchorPane id="channel"
+                layoutY="8" layoutX="455">
+        <Label id="btn_channel"
+               alignment="CENTER"
+               styleClass="shadow"
+               style="-fx-background-color: #5C64EA;"
+               prefWidth="40" prefHeight="40"/>
+
+        <JFXRippler id="ripple_channel"
+                    styleClass="jfx-rippler2">
+            <Label prefWidth="40" prefHeight="40"/>
+        </JFXRippler>
+    </AnchorPane>
+
+    <AnchorPane id="group"
+                layoutY="8" layoutX="455" visible="false">
+        <Label id="btn_group"
+               alignment="CENTER"
+               styleClass="shadow"
+               style="-fx-background-color: #5C64EA;"
+               prefWidth="40" prefHeight="40"/>
+
+        <JFXRippler id="ripple_group"
+                    styleClass="jfx-rippler2">
+            <Label prefWidth="40" prefHeight="40"/>
+        </JFXRippler>
+    </AnchorPane>
+
+
+
+</AnchorPane>

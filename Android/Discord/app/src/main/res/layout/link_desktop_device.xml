@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aghajari.views.ClipFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/dark_rad"
+    android:elevation="4dp"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginBottom="12dp"
+    android:layout_height="48dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="\uef6b"
+            android:layout_marginRight="6dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/materialicons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:text="Link Desktop Device"
+            android:gravity="center_vertical|left"
+            android:layout_marginLeft="6dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/click"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.aghajari.views.ClipFrameLayout>

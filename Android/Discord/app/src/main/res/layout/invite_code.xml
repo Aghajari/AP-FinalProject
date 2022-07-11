@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/background_dark2"
+        app:cardElevation="4dp">
+
+        <FrameLayout
+            android:id="@+id/header"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <TextView
+                android:id="@+id/back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="\ue5c4"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/materialicons"
+                android:layout_margin="13dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:gravity="center_vertical|left"
+                android:text="Invite Code"
+                android:layout_marginHorizontal="72dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/semi_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/background_dark2"
+        app:cardElevation="4dp">
+
+        <TextView
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/code"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:text="CODE"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginHorizontal="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_marginHorizontal="6dp"
+            android:background="@drawable/gradient2_rad2"
+            android:id="@+id/copy"
+            android:orientation="horizontal"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="\ue14d"
+                android:layout_marginRight="6dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/materialicons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:text="Copy"
+                android:gravity="center_vertical|left"
+                android:layout_marginLeft="6dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="6dp"
+            android:background="@drawable/gradient_rad2"
+            android:id="@+id/revoke"
+            android:orientation="horizontal"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="\ue872"
+                android:layout_marginRight="6dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/materialicons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:text="Revoke"
+                android:gravity="center_vertical|left"
+                android:layout_marginLeft="6dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<AnchorPane prefHeight="180" prefWidth="280" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #37393E; -fx-background-radius: 16">
+
+    <MFXTextField layoutX="24" layoutY="40" minWidth="232" minHeight="48" floatMode="ABOVE"
+                  floatingText="Server Name"
+                  id="name"/>
+
+    <MFXButton id="btn"
+               buttonType="RAISED"
+               layoutX="25"
+               layoutY="120"
+               styleClass="outline-button" minHeight="35.0" minWidth="230.0"
+               text="Change"/>
+
+</AnchorPane>

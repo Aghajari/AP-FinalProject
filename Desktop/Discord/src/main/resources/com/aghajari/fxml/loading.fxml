@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<?import javafx.scene.control.Label?>
+<AnchorPane fx:id="root" style="-fx-background-color: #202225;"
+            prefHeight="630" prefWidth="1000" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aghajari.ui.LoadingController">
+
+    <VBox prefHeight="630" prefWidth="1000" spacing="16"
+          alignment="CENTER"
+     scaleX="1.5" scaleY="1.5" style="-fx-background-color: transparent;">
+        <MFXProgressSpinner prefWidth="40"/>
+        <Label textFill="gray" text="Discord" style="-fx-font-family: MyFontBold;"/>
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import com.jfoenix.controls.JFXRippler?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <Label id="btn"
+           alignment="CENTER"
+           layoutX="500"
+           layoutY="545"
+           styleClass="call"
+           style="-fx-background-color: #339966;"
+           prefWidth="60" prefHeight="60"/>
+
+    <JFXRippler id="ripple" layoutX="500" styleClass="jfx-rippler2"
+                layoutY="545">
+        <Label prefWidth="60" prefHeight="60"/>
+    </JFXRippler>
+</AnchorPane>

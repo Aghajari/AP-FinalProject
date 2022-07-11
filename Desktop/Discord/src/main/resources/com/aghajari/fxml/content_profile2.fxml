@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import com.jfoenix.controls.JFXRippler?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <MFXScrollPane prefHeight="630" prefWidth="585">
+        <AnchorPane prefWidth="580">
+
+            <AnchorPane prefWidth="537" prefHeight="400"
+                        layoutY="24" layoutX="24"
+                        style="-fx-background-radius: 16; -fx-background-color: #202225;">
+
+                <Pane id="bg" styleClass="header_bg"
+                      layoutX="2" layoutY="2" prefWidth="533" prefHeight="98"/>
+
+                <Pane style="-fx-background-color: #202225; -fx-background-radius: 90;"
+                      prefWidth="90" prefHeight="90"
+                      layoutX="24" layoutY="75"/>
+
+                <ImageView id="avatar" layoutX="29" layoutY="80"
+                           fitWidth="80" fitHeight="80"/>
+
+                <Label id="close" style="-fx-background-color: #202225; -fx-background-radius: 90;"
+                      prefWidth="40" prefHeight="40"
+                      layoutX="473" layoutY="83"/>
+
+                <JFXRippler id="close_ripple"
+                            layoutX="473" styleClass="jfx-rippler2"
+                            layoutY="83">
+                    <Label prefWidth="40" prefHeight="40"/>
+                </JFXRippler>
+
+                <Label id="block" style="-fx-background-color: #202225; -fx-background-radius: 90;"
+                       prefWidth="40" prefHeight="40"
+                       layoutX="421" layoutY="83"/>
+
+                <JFXRippler id="block_ripple"
+                            layoutX="421" styleClass="jfx-rippler2"
+                            layoutY="83">
+                    <Label prefWidth="40" prefHeight="40"/>
+                </JFXRippler>
+
+                <Pane id="online" layoutX="88" layoutY="140" visible="false"
+                      prefWidth="20" prefHeight="20"
+                      style="-fx-background-color: green; -fx-background-radius: 24;
+-fx-border-width: 4; -fx-border-color: #202225; -fx-border-radius: 24; -fx-border-insets: -1;"/>
+
+                <Label layoutY="108" layoutX="124"
+                       id="name"
+                       textFill="white"
+                       style="-fx-font-family: MyFontBold; -fx-font-size: 22"/>
+
+                <AnchorPane style="-fx-background-color: #2F3136; -fx-background-radius: 16"
+                            prefWidth="513" prefHeight="208"
+                            layoutX="12" layoutY="180">
+
+                    <VBox spacing="16" layoutX="16" layoutY="12" prefWidth="481" prefHeight="176"
+                          alignment="CENTER_LEFT">
+                        <HBox spacing="20">
+                            <VBox spacing="4" maxWidth="400" minWidth="400">
+                                <Label textFill="gray" text="USERNAME"
+                                       style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                                <Label id="username" textFill="white" style="-fx-font-size: 16;"/>
+                            </VBox>
+                        </HBox>
+
+                        <VBox spacing="4">
+                            <Label textFill="gray" text="NAME" style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                            <Label id="full_name" textFill="white" style="-fx-font-size: 16;"/>
+                        </VBox>
+
+                        <VBox spacing="4">
+                            <Label textFill="gray" text="EMAIL"
+                                   style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                            <Label id="email" textFill="white" style="-fx-font-size: 16;"/>
+                        </VBox>
+                    </VBox>
+                </AnchorPane>
+            </AnchorPane>
+
+        </AnchorPane>
+    </MFXScrollPane>
+</AnchorPane>

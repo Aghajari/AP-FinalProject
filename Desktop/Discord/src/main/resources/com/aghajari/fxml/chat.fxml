@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.scene.control.TextArea?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.geometry.Insets?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <AnchorPane id="sender" layoutX="56" layoutY="550" prefWidth="393" prefHeight="56"
+                style="-fx-background-color: #2F3136; -fx-background-radius: 28;">
+
+        <TextArea id="edt" promptText="Write a message..." layoutX="12" layoutY="12"
+                  minWidth="393" maxWidth="393" prefHeight="32" minHeight="10"
+                  style="-fx-prompt-text-fill: gray; -fx-background-color: transparent;
+         -fx-text-fill: white; -fx-font-size: 17; -fx-font-family: MyFont;" wrapText="true"/>
+    </AnchorPane>
+
+    <Label id="send_pnl" layoutX="473" layoutY="550" prefWidth="56" prefHeight="56"
+           style="    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #1763c6ff 0.0%, #5ed3f7ff 100.0%); -fx-background-radius: 100;"/>
+
+    <ImageView id="send" layoutX="473" layoutY="550" fitWidth="56" fitHeight="56"
+               scaleX="0.7" scaleY="0.7">
+        <Image url="@../send.jpeg"/>
+    </ImageView>
+
+    <AnchorPane id="access" visible="false" layoutX="56" layoutY="550" prefWidth="475" prefHeight="56"
+                style="-fx-background-color: #2F3136; -fx-background-radius: 28;">
+
+        <Label id="access_lbl" text="You don't have access!" alignment="CENTER" layoutX="12" layoutY="12"
+               minWidth="475" maxWidth="475" prefHeight="32" minHeight="10"
+               style="-fx-prompt-text-fill: gray; -fx-background-color: transparent;
+         -fx-text-fill: white; -fx-font-size: 17; -fx-font-family: MyFont;"/>
+    </AnchorPane>
+
+
+
+    <MFXScrollPane id="scroll" minWidth="585" maxWidth="585"
+                   maxHeight="546" prefHeight="546"/>
+
+    <BorderPane id="hiPnl" visible="false" minWidth="585" maxWidth="585"
+                maxHeight="546" prefHeight="546">
+
+        <center>
+            <VBox alignment="CENTER" spacing="8">
+                <ImageView id="hi" fitWidth="250" fitHeight="250"/>
+
+                <MFXButton id="sayHi"
+                           styleClass="mfx-button3"
+                           buttonType="RAISED"
+                           minHeight="35.0" minWidth="100.0"
+                           text="Say Hello"/>
+            </VBox>
+        </center>
+    </BorderPane>
+
+    <BorderPane prefWidth="585" layoutY="18">
+        <center>
+            <Label id="typing" visible="false" style="-fx-background-color: #2F3136F0; -fx-background-radius: 100;" minWidth="10" alignment="CENTER"
+                   textFill="white" text="Is typing" minHeight="24">
+                <padding>
+                    <Insets left="16" right="16" top="8" bottom="8"/>
+                </padding>
+            </Label>
+        </center>
+    </BorderPane>
+</AnchorPane>

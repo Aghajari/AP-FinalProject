@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXRippler?>
+
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <AnchorPane layoutX="24" layoutY="24" prefWidth="537" prefHeight="56"
+                style="-fx-background-color: #2F3136; -fx-background-radius: 12;">
+
+        <TextField id="api" promptText="Bot HTTP Api" layoutX="12" layoutY="12"
+                   minWidth="513" maxWidth="513" prefHeight="32"
+                   style="-fx-prompt-text-fill: gray; -fx-background-color: transparent;
+         -fx-text-fill: white; -fx-font-size: 18; -fx-font-family: MyFont"/>
+
+        <AnchorPane id="bot"
+                    layoutY="8" layoutX="485"
+                    visible="false">
+            <Label id="btn_bot"
+                   alignment="CENTER"
+                   styleClass="shadow"
+                   style="-fx-background-color: #5C64EA;"
+                   prefWidth="40" prefHeight="40"/>
+
+            <JFXRippler id="ripple_bot"
+                        styleClass="jfx-rippler2">
+                <Label prefWidth="40" prefHeight="40"/>
+            </JFXRippler>
+        </AnchorPane>
+
+        <MFXProgressSpinner visible="false" id="loading" layoutY="6" layoutX="482"
+                            prefWidth="44" prefHeight="44"/>
+    </AnchorPane>
+
+    <Label textFill="gray" text="Connect your Account to a bot..."
+        layoutX="36" layoutY="90" style="-fx-font-size: 14"/>
+
+    <Label id="disconnect" visible="false" prefWidth="200" prefHeight="48"
+           layoutY="148" layoutX="192.5"
+           styleClass="logout_hover"
+           style="-fx-font-size: 18;"
+           text="Disconnect" alignment="CENTER"/>
+
+</AnchorPane>

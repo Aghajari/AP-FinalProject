@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/chat"
+        layout="@layout/chat_item" />
+
+    <com.aghajari.views.ClipFrameLayout
+        android:background="@drawable/circle"
+        android:layout_gravity="right|center_vertical"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="24dp">
+
+        <TextView
+            android:id="@+id/remove"
+            android:background="?attr/selectableItemBackground"
+            android:text="\ue15b"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/materialicons"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.aghajari.views.ClipFrameLayout>
+
+    <com.aghajari.views.ClipFrameLayout
+        android:background="@drawable/circle"
+        android:layout_gravity="right|center_vertical"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="76dp">
+
+        <TextView
+            android:id="@+id/permission"
+            android:background="?attr/selectableItemBackground"
+            android:text="\ue73c"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/materialicons"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.aghajari.views.ClipFrameLayout>
+
+</FrameLayout>

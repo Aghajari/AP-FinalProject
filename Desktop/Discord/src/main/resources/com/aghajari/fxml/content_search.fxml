@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <VBox id="box" prefHeight="630" prefWidth="585" alignment="CENTER" spacing="40">
+        <ImageView id="img" fitWidth="350" preserveRatio="true"/>
+        <Label textFill="gray" text="Search for users to start a new conversation."/>
+    </VBox>
+
+    <MFXProgressSpinner id="loading" visible="false" prefWidth="40" prefHeight="40" layoutX="272" layoutY="295"/>
+
+    <AnchorPane layoutX="24" layoutY="24" prefWidth="537" prefHeight="56"
+                style="-fx-background-color: #2F3136; -fx-background-radius: 12;">
+
+        <TextField id="edt" promptText="Who are you looking for?" layoutX="12" layoutY="12"
+                   minWidth="513" maxWidth="513" prefHeight="32"
+                   style="-fx-prompt-text-fill: gray; -fx-background-color: transparent;
+         -fx-text-fill: white; -fx-font-size: 18; -fx-font-family: MyFont"/>
+    </AnchorPane>
+
+    <MFXScrollPane id="scroll" layoutY="80" minWidth="585" maxWidth="585"
+                   minHeight="550" maxHeight="550"/>
+
+    <BorderPane visible="false" id="noUser" prefHeight="630" prefWidth="585">
+        <center>
+            <Label textFill="gray" text="No user found :("/>
+        </center>
+    </BorderPane>
+</AnchorPane>

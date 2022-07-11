@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import io.github.palexdev.materialfx.font.MFXFontIcon?>
+<AnchorPane prefHeight="48" prefWidth="180" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <Pane layoutX="12" layoutY="4" minWidth="156" minHeight="40"
+          style="-fx-background-color: #43464D; -fx-background-radius: 12;"/>
+
+    <Label layoutX="28" maxHeight="48" minHeight="48"/>
+
+    <Label textFill="white" layoutX="58" maxHeight="48" minHeight="48"
+           minWidth="180" maxWidth="180"/>
+
+</AnchorPane>

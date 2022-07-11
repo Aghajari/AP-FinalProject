@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+
+<?import com.jfoenix.controls.JFXRippler?>
+<AnchorPane prefHeight="56" prefWidth="560" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <ImageView id="img" layoutX="28" layoutY="3" fitWidth="50" fitHeight="50"/>
+
+    <VBox layoutX="102" layoutY="3"  minHeight="50">
+        <Label id="name" minHeight="25" textFill="lightgray" />
+        <Label id="full_name" minHeight="25" textFill="gray" />
+    </VBox>
+
+    <AnchorPane id="sent_request"
+                layoutY="8" layoutX="512"
+                visible="false">
+        <Label id="btn_sent_request"
+               alignment="CENTER"
+               styleClass="shadow"
+               style="-fx-background-color: #1763c6;"
+               prefWidth="40" prefHeight="40"/>
+
+        <JFXRippler id="ripple_sent_request"
+                    styleClass="jfx-rippler2">
+            <Label prefWidth="40" prefHeight="40"/>
+        </JFXRippler>
+    </AnchorPane>
+
+    <AnchorPane id="delete_request"
+                layoutY="8" layoutX="512"
+                visible="false">
+        <Label id="btn_delete_request"
+               alignment="CENTER"
+               styleClass="shadow"
+               style="-fx-background-color: red;"
+               prefWidth="40" prefHeight="40"/>
+
+        <JFXRippler id="ripple_delete_request"
+                    styleClass="jfx-rippler2">
+            <Label prefWidth="40" prefHeight="40"/>
+        </JFXRippler>
+    </AnchorPane>
+
+    <AnchorPane id="request"
+                layoutY="8" layoutX="464"
+                visible="false">
+        <Label id="btn_accept_request"
+               alignment="CENTER"
+               layoutX="48"
+               styleClass="shadow"
+               style="-fx-background-color: #339966;"
+               prefWidth="40" prefHeight="40"/>
+
+        <JFXRippler id="ripple_accept_request"
+                    layoutX="48"
+                    styleClass="jfx-rippler2">
+            <Label prefWidth="40" prefHeight="40"/>
+        </JFXRippler>
+
+        <Label id="btn_reject_request"
+               alignment="CENTER"
+               styleClass="shadow"
+               style="-fx-background-color: red;"
+               prefWidth="40" prefHeight="40"/>
+
+        <JFXRippler
+                id="ripple_reject_request"
+                styleClass="jfx-rippler2">
+            <Label prefWidth="40" prefHeight="40"/>
+        </JFXRippler>
+    </AnchorPane>
+
+    <AnchorPane id="server"
+                layoutY="8" layoutX="464"
+                visible="false">
+        <Label id="btn_remove"
+               alignment="CENTER"
+               layoutX="48"
+               styleClass="shadow"
+               style="-fx-background-color: #5C64EA;"
+               prefWidth="40" prefHeight="40"/>
+
+        <JFXRippler id="ripple_remove"
+                    layoutX="48"
+                    styleClass="jfx-rippler2">
+            <Label prefWidth="40" prefHeight="40"/>
+        </JFXRippler>
+
+        <Label id="btn_permissions"
+               alignment="CENTER"
+               styleClass="shadow"
+               style="-fx-background-color: #5C64EA;"
+               prefWidth="40" prefHeight="40"/>
+
+        <JFXRippler
+                id="ripple_permissions"
+                styleClass="jfx-rippler2">
+            <Label prefWidth="40" prefHeight="40"/>
+        </JFXRippler>
+    </AnchorPane>
+
+    <AnchorPane id="touch" prefWidth="460" prefHeight="56"/>
+</AnchorPane>

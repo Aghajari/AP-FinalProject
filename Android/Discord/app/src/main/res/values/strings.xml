@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Discord</string>
+    <string name="username_hint">You can choose a username on Discord. If you do, people will be able to find you by this username.\n\nYou can use a-z, 0-9 and underscores. Minimum length is 5 characters.</string>
+    <string name="profile_hint">Upload an image for your profile by clicking on avatar.</string>
+    <string name="profile_hint2">Upload an image for your profile.</string>
+</resources>

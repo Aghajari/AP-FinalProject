@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aghajari.axanimation.layouts.AXAFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="104dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:cardBackgroundColor="@color/background_dark"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:fontFamily="@font/materialicons"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="\ue8b6"
+            android:layout_width="56dp"
+            android:layout_height="56dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="56dp"
+            android:textColorHint="@color/gray"
+            android:hint="Search"
+            android:textColor="@color/white"
+            android:fontFamily="@font/regular"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:background="@null"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profile"
+            android:layout_margin="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"/>
+    </androidx.cardview.widget.CardView>
+
+</com.aghajari.axanimation.layouts.AXAFrameLayout>

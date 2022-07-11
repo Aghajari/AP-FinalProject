@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<AnchorPane prefHeight="340" prefWidth="280" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #37393E; -fx-background-radius: 16">
+
+    <MFXTextField layoutX="24" layoutY="40" minWidth="232" minHeight="48" floatMode="ABOVE"
+                  floatingText="Username"
+                  id="username"/>
+
+    <Label layoutY="80" maxWidth="280" wrapText="true" style="-fx-font-size: 16; -fx-text-fill: lightgray;"
+           text="You can choose a username on Discord. If you do, people will be able to find you by this username.&#10;&#10;You can use a-z, 0-9 and underscores. Minimum length is 5 characters.">
+        <padding>
+            <Insets topRightBottomLeft="24"/>
+        </padding>
+    </Label>
+
+    <MFXButton id="btn"
+               buttonType="RAISED"
+               layoutX="25"
+               layoutY="280"
+               styleClass="outline-button" minHeight="35.0" minWidth="230.0"
+               text="Change"/>
+
+    <MFXProgressBar id="progress" visible="false" layoutX="16" layoutY="336" minHeight="5" maxHeight="5"
+                    minWidth="248"/>
+</AnchorPane>

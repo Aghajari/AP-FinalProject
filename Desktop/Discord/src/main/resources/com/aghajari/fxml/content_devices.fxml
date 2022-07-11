@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <MFXScrollPane id="scroll" layoutY="0" minWidth="585" maxWidth="585"
+                   minHeight="550" maxHeight="550"/>
+
+</AnchorPane>

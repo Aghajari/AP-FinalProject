@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+
+<?import com.jfoenix.controls.JFXRippler?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <VBox id="box" prefHeight="630" prefWidth="585" alignment="CENTER" spacing="40">
+        <ImageView id="img" fitWidth="240" fitHeight="130"/>
+        <Label textFill="gray" text="NO FRIENDS IN COMMON"/>
+    </VBox>
+
+    <AnchorPane
+            id="bg"
+            layoutX="24" layoutY="24" prefWidth="537" prefHeight="56"
+            style="-fx-background-color: #2F3136; -fx-background-radius: 12;">
+
+        <Label id="tv"
+               layoutX="12" layoutY="12"
+               minWidth="513" maxWidth="513" prefHeight="32"
+               style="-fx-background-color: transparent;
+         -fx-text-fill: white; -fx-font-size: 18; -fx-font-family: MyFont"/>
+
+        <AnchorPane id="send_request"
+                    layoutY="8" layoutX="485"
+                    visible="false">
+            <Label id="btn_send_request"
+                   alignment="CENTER"
+                   styleClass="shadow"
+                   style="-fx-background-color: #339966;"
+                   prefWidth="40" prefHeight="40"/>
+
+            <JFXRippler id="ripple_send_request"
+                        styleClass="jfx-rippler2">
+                <Label prefWidth="40" prefHeight="40"/>
+            </JFXRippler>
+        </AnchorPane>
+
+        <AnchorPane id="sent_request"
+                    layoutY="8" layoutX="485"
+                    visible="false">
+            <Label id="btn_sent_request"
+                   alignment="CENTER"
+                   styleClass="shadow"
+                   style="-fx-background-color: #1763c6;"
+                   prefWidth="40" prefHeight="40"/>
+
+            <JFXRippler id="ripple_sent_request"
+                        styleClass="jfx-rippler2">
+                <Label prefWidth="40" prefHeight="40"/>
+            </JFXRippler>
+        </AnchorPane>
+
+        <AnchorPane id="delete_request"
+                    layoutY="8" layoutX="485"
+                    visible="false">
+            <Label id="btn_delete_request"
+                   alignment="CENTER"
+                   styleClass="shadow"
+                   style="-fx-background-color: red;"
+                   prefWidth="40" prefHeight="40"/>
+
+            <JFXRippler id="ripple_delete_request"
+                        styleClass="jfx-rippler2">
+                <Label prefWidth="40" prefHeight="40"/>
+            </JFXRippler>
+        </AnchorPane>
+
+        <AnchorPane id="request"
+                    layoutY="8" layoutX="437"
+                    visible="false">
+            <Label id="btn_accept_request"
+                   alignment="CENTER"
+                   layoutX="48"
+                   styleClass="shadow"
+                   style="-fx-background-color: #339966;"
+                   prefWidth="40" prefHeight="40"/>
+
+            <JFXRippler id="ripple_accept_request"
+                        layoutX="48"
+                        styleClass="jfx-rippler2">
+                <Label prefWidth="40" prefHeight="40"/>
+            </JFXRippler>
+
+            <Label id="btn_reject_request"
+                   alignment="CENTER"
+                   styleClass="shadow"
+                   style="-fx-background-color: red;"
+                   prefWidth="40" prefHeight="40"/>
+
+            <JFXRippler
+                    id="ripple_reject_request"
+                    styleClass="jfx-rippler2">
+                <Label prefWidth="40" prefHeight="40"/>
+            </JFXRippler>
+        </AnchorPane>
+    </AnchorPane>
+
+    <MFXScrollPane id="scroll" layoutY="80" minWidth="585" maxWidth="585"
+                   minHeight="550" maxHeight="550"/>
+
+</AnchorPane>

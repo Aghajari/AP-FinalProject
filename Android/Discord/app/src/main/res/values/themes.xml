@@ -1,0 +1,31 @@
+<resources>
+
+    <style name="Theme.Discord" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color2</item>
+        <item name="colorPrimaryVariant">@color/color1</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/color2</item>
+        <item name="colorSecondaryVariant">@color/color1</item>
+        <item name="colorOnSecondary">@color/color2</item>
+        <item name="colorAccent">@color/color2</item>
+        <item name="colorPrimaryDark">@color/color1</item>
+        <item name="colorControlNormal">@color/gray</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <item name="android:progressTint">@color/white</item>
+        <item name="android:thumbTint">@color/white</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <style name="AghajariDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/AghajariDialogAnim</item>
+    </style>
+
+    <style name="AghajariDialogAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+</resources>

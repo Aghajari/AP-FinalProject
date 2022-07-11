@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:layout_marginVertical="1dp">
+
+    <TextView
+        android:id="@+id/time"
+        android:text="00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="8dp"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/time_text"
+        android:textSize="10sp" />
+
+    <FrameLayout
+        android:background="@drawable/message_mine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="24dp">
+
+        <include android:id="@+id/message"
+            layout="@layout/message_text"/>
+
+    </FrameLayout>
+
+</LinearLayout>

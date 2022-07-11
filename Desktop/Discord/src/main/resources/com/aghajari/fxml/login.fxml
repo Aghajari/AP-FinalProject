@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXRippler?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import javafx.scene.image.ImageView?>
+
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<AnchorPane id="login" fx:id="root" prefHeight="630" prefWidth="1000" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aghajari.ui.LoginController">
+
+    <ImageView fx:id="bg" fitHeight="630" fitWidth="1000" />
+
+    <BorderPane prefHeight="630" prefWidth="1000">
+
+        <center>
+            <AnchorPane fx:id="pages" maxHeight="420" maxWidth="350"
+                        BorderPane.alignment="CENTER">
+
+                <AnchorPane fx:id="AnchorPane" id="pane" minHeight="420" minWidth="350" styleClass="blur-pane"
+                            BorderPane.alignment="CENTER"/>
+
+                <AnchorPane minHeight="420" minWidth="350" fx:id="first_page">
+                    <HBox>
+                        <JFXRippler>
+                            <Label alignment="CENTER" maxWidth="Infinity"
+                                   minHeight="50"
+                                   minWidth="175.0"
+                                   style="-fx-text-fill: white;" text="Sign In"
+                                   onMouseClicked="#signInClick"
+                                   fx:id="sign_in"/>
+                        </JFXRippler>
+
+                        <JFXRippler>
+                            <Label alignment="CENTER" maxWidth="Infinity"
+                                   minHeight="50"
+                                   minWidth="175.0"
+                                   style="-fx-text-fill: white;" text="Sign Up"
+                                   onMouseClicked="#signUpClick"
+                                   fx:id="sign_up"/>
+                        </JFXRippler>
+                    </HBox>
+
+                    <Pane
+                            fx:id="indicator"
+                            style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #5ed3f7ff 0.0%, #1763c6ff 100.0%);"
+                            minHeight="4"
+                            minWidth="175"
+                            layoutY="50"/>
+
+                    <AnchorPane layoutY="54" maxWidth="350" fx:id="tabs">
+
+                        <VBox alignment="CENTER" spacing="40" fx:id="tab_sign_in" minWidth="350"
+                              minHeight="366">
+
+                            <children>
+                                <MFXTextField minWidth="300" minHeight="48" floatMode="ABOVE"
+                                              floatingText="Email or Username"
+                                              fx:id="signin_email"/>
+
+                                <MFXPasswordField minWidth="300" minHeight="48" floatMode="ABOVE"
+                                                  floatingText="Password"
+                                                  onAction="#next_signin"
+                                                  fx:id="signin_password"/>
+
+                                <HBox spacing="12" alignment="CENTER">
+
+                                    <MFXButton buttonType="RAISED"
+                                               visible="false"
+                                               text=""
+                                               styleClass="outline-button" maxHeight="35.0" maxWidth="35.0"/>
+
+                                    <MFXButton buttonType="RAISED"
+                                               styleClass="outline-button" minHeight="35.0" minWidth="140.0"
+                                               text="Sign In"
+                                               onAction="#next_signin"/>
+
+                                    <MFXButton buttonType="RAISED"
+                                               fx:id="qr_scan"
+                                               text=""
+                                               styleClass="outline-button" maxHeight="35.0" maxWidth="35.0"
+                                               onAction="#next_qr"/>
+                                </HBox>
+
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER" spacing="40" translateX="350" fx:id="tab_sign_up" minWidth="350"
+                              minHeight="366">
+
+                            <children>
+                                <MFXTextField minWidth="300" minHeight="48" floatMode="ABOVE"
+                                              floatingText="Email"
+                                              fx:id="signup_email"/>
+
+                                <MFXTextField minWidth="300" minHeight="48" floatMode="ABOVE"
+                                              floatingText="Full name"
+                                              fx:id="signup_name"/>
+
+                                <MFXPasswordField minWidth="300" minHeight="48" floatMode="ABOVE"
+                                                  floatingText="Password"
+                                                  onAction="#next_signup"
+                                                  fx:id="signup_password"/>
+
+                                <MFXButton buttonType="RAISED"
+                                           styleClass="outline-button" minHeight="35.0" minWidth="140.0"
+                                           text="Next"
+                                           onAction="#next_signup"/>
+
+                            </children>
+                        </VBox>
+                    </AnchorPane>
+                </AnchorPane>
+
+                <AnchorPane translateX="350" minHeight="420" minWidth="350" fx:id="qr_page">
+
+                    <VBox spacing="24" alignment="CENTER" minHeight="420" minWidth="350">
+
+                        <AnchorPane minWidth="150" minHeight="150" maxWidth="150" maxHeight="150"
+                                    styleClass="call"
+                        style="-fx-background-color: #ffffff; -fx-background-radius: 12;">
+
+                            <ImageView layoutY="15" layoutX="15" visible="false" fx:id="qr_image" fitWidth="120" fitHeight="120"/>
+                            <MFXProgressSpinner fx:id="qr_loading" layoutX="55" layoutY="55" prefWidth="40"/>
+                        </AnchorPane>
+
+                        <Label layoutY="140" alignment="CENTER" minWidth="350" wrapText="true" style="-fx-font-size: 16; -fx-text-fill: lightgray;"
+                               text="    Scan QR code from an &#10;authorized device to log in.">
+                            <padding>
+                                <Insets topRightBottomLeft="24"/>
+                            </padding>
+                        </Label>
+
+                        <MFXButton buttonType="RAISED"
+                                   styleClass="outline-button2" minHeight="35.0" minWidth="140.0"
+                                   text="Back"
+                                   onAction="#back_qr"/>
+
+                    </VBox>
+
+                </AnchorPane>
+
+                <AnchorPane translateX="350" minHeight="420" minWidth="350" fx:id="username_page">
+                    <Label text="Welcome!" style="-fx-font-size: 24; -fx-text-fill: white;">
+                        <padding>
+                            <Insets topRightBottomLeft="24"/>
+                        </padding>
+                    </Label>
+
+                    <Label layoutY="140" maxWidth="350" wrapText="true" style="-fx-font-size: 16; -fx-text-fill: lightgray;"
+                           text="You can choose a username on Discord. If you do, people will be able to find you by this username.&#10;&#10;You can use a-z, 0-9 and underscores. Minimum length is 5 characters.">
+                        <padding>
+                            <Insets topRightBottomLeft="24"/>
+                        </padding>
+                    </Label>
+
+                    <MFXTextField layoutX="24" layoutY="98" minWidth="300" minHeight="48" floatMode="ABOVE"
+                                  floatingText="Username"
+                                  fx:id="username"/>
+
+                    <HBox layoutY="350" alignment="CENTER" spacing="24" minWidth="350">
+
+                        <MFXButton buttonType="RAISED"
+                                   styleClass="outline-button" minHeight="35.0" minWidth="140.0"
+                                   text="Skip"
+                                   onAction="#skip_username"/>
+
+                        <MFXButton buttonType="RAISED"
+                                   styleClass="outline-button2" minHeight="35.0" minWidth="140.0"
+                                   text="Next"
+                                   onAction="#next_username"/>
+
+                    </HBox>
+                </AnchorPane>
+
+                <AnchorPane translateX="350" minHeight="420" minWidth="350" fx:id="avatar_page">
+                    <Label text="Profile" style="-fx-font-size: 24; -fx-text-fill: white;">
+                        <padding>
+                            <Insets topRightBottomLeft="24"/>
+                        </padding>
+                    </Label>
+
+                    <Label layoutY="170" maxWidth="350" wrapText="true" style="-fx-font-size: 16; -fx-text-fill: lightgray;"
+                           text="Upload an image for your profile by clicking on avatar or drag and drop image here.">
+                        <padding>
+                            <Insets topRightBottomLeft="24"/>
+                        </padding>
+                    </Label>
+
+                    <ImageView layoutX="125" layoutY="75" fitWidth="100" fitHeight="100"
+                               fx:id="avatar"/>
+
+                    <MFXButton layoutY="350" layoutX="25" buttonType="RAISED"
+                               styleClass="outline-button2" minHeight="35.0" minWidth="300.0"
+                               text="Sign Up"
+                               onAction="#signup_done"/>
+                </AnchorPane>
+
+                <MFXProgressBar fx:id="progress" visible="false" layoutY="415" minHeight="5" maxHeight="5"
+                                minWidth="350"/>
+            </AnchorPane>
+
+        </center>
+
+        <bottom>
+            <Label alignment="CENTER" maxWidth="Infinity" style="-fx-text-fill: white;" text="Discord © Aghajari">
+
+                <padding>
+                    <Insets bottom="20"/>
+                </padding>
+            </Label>
+        </bottom>
+    </BorderPane>
+
+</AnchorPane>

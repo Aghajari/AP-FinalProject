@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<AnchorPane prefHeight="300" prefWidth="250" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #37393E; -fx-background-radius: 16">
+
+    <ImageView id="img" layoutX="75" layoutY="75" fitWidth="100" fitHeight="100"/>
+
+    <MFXButton id="btn"
+               buttonType="RAISED"
+               layoutX="25"
+               layoutY="240"
+               styleClass="outline-button" minHeight="35.0" minWidth="200.0"
+               text="Change"/>
+
+    <MFXProgressBar id="progress" visible="false" layoutX="16" layoutY="295" minHeight="5" maxHeight="5"
+                    minWidth="218"/>
+</AnchorPane>

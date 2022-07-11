@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<AnchorPane prefHeight="56" prefWidth="230" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <ImageView layoutX="24" layoutY="3" fitWidth="50" fitHeight="50"/>
+
+    <Label textFill="white" layoutX="98" layoutY="3" maxHeight="50" minHeight="50"
+           minWidth="120" maxWidth="120"/>
+
+    <Pane minWidth="6" maxWidth="6" visible="false"
+          minHeight="40" layoutY="8" styleClass="round"
+          style="-fx-background-color: #1763c6ff;"/>
+
+</AnchorPane>

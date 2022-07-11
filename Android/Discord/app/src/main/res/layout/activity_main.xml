@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/background_dark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:background="@drawable/black_alpha"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="200dp">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:indeterminate="true"
+            app:indicatorColor="@color/white"/>
+
+        <TextView
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="Discord"
+            android:fontFamily="@font/semi_bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/sign"
+        android:background="@drawable/black_alpha"
+        android:layout_width="350dp"
+        android:layout_height="450dp">
+
+        <FrameLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <TextView
+                    android:background="?attr/selectableItemBackground"
+                    android:id="@+id/sign_in_text"
+                    android:textSize="18sp"
+                    android:textColor="@color/color2"
+                    android:text="Sign In"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:background="?attr/selectableItemBackground"
+                    android:id="@+id/sign_up_text"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Sign Up"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="56dp"
+                android:id="@+id/selector"
+                android:background="@drawable/gradient"
+                android:layout_width="175dp"
+                android:layout_height="2dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_horizontal|top"
+                android:layout_marginTop="58dp"
+                android:id="@+id/sign_in_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:id="@+id/login_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Email or Username"
+                    android:singleLine="true"
+                    android:textColorHint="@color/gray"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/color2"
+                    android:textSize="16sp"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/login_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/color2"
+                    android:fontFamily="@font/regular"
+                    android:textSize="16sp"/>
+
+
+                <com.aghajari.views.LoadingButton
+                    android:id="@+id/login_btn"
+                    android:layout_marginTop="150dp"
+                    android:background="@drawable/gradient_rad"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackground"
+                        android:id="@+id/login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="Sign In"/>
+
+                </com.aghajari.views.LoadingButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_horizontal|top"
+                android:layout_marginTop="58dp"
+                android:translationX="350dp"
+                android:id="@+id/sign_up_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:id="@+id/signup_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Email"
+                    android:nextFocusDown="@id/signup_name"
+                    android:singleLine="true"
+                    android:textColorHint="@color/gray"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/color2"
+                    android:textSize="16sp"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:id="@+id/signup_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Full Name"
+                    android:singleLine="true"
+                    android:textColorHint="@color/gray"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/color2"
+                    android:textSize="16sp"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_marginHorizontal="24dp"
+                    android:singleLine="true"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/signup_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/color2"
+                    android:fontFamily="@font/regular"
+                    android:textSize="16sp"/>
+
+                <com.aghajari.views.LoadingButton
+                    android:id="@+id/signup_btn"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/gradient_rad"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackground"
+                        android:id="@+id/signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="Next"/>
+
+                </com.aghajari.views.LoadingButton>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/username_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationX="350dp">
+
+            <TextView
+                android:textSize="22sp"
+                android:textColor="@color/color2"
+                android:text="Welcome"
+                android:fontFamily="@font/semi_bold"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_marginTop="80dp"
+                android:layout_marginHorizontal="24dp"
+                android:id="@+id/username_edt"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Username"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColorHint="@color/gray"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/color2"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="@string/username_hint"
+                android:fontFamily="@font/regular"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="148dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:layout_marginBottom="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.aghajari.views.LoadingButton
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/gradient2_rad"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackground"
+                        android:id="@+id/skip_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="Skip"/>
+
+                </com.aghajari.views.LoadingButton>
+
+                <com.aghajari.views.LoadingButton
+                    android:id="@+id/next_username_btn"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gradient_rad"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackground"
+                        android:id="@+id/next_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="Next"/>
+
+                </com.aghajari.views.LoadingButton>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/profile_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationX="350dp">
+
+            <TextView
+                android:textSize="22sp"
+                android:textColor="@color/color2"
+                android:text="Profile"
+                android:fontFamily="@font/semi_bold"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="80dp"
+                android:layout_marginHorizontal="24dp"
+                android:id="@+id/profile_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="@string/profile_hint"
+                android:fontFamily="@font/regular"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="210dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <com.aghajari.views.LoadingButton
+                android:id="@+id/next_profile_btn"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="48dp"
+                android:background="@drawable/gradient2_rad"
+                android:layout_width="140dp"
+                android:layout_height="50dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:background="?attr/selectableItemBackground"
+                    android:id="@+id/next_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="Sign Up"/>
+
+            </com.aghajari.views.LoadingButton>
+
+        </FrameLayout>
+    </FrameLayout>
+
+
+</FrameLayout>

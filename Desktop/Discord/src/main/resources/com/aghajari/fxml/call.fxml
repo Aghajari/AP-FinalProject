@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import com.jfoenix.controls.JFXRippler?>
+<AnchorPane prefHeight="630" prefWidth="340" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <BorderPane maxWidth="340" maxHeight="630" minWidth="340" minHeight="630"
+                style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #1763c6ff 0.0%, #5ed3f7ff 100.0%);">
+        <center>
+            <ImageView id="img" fitHeight="630" preserveRatio="true"/>
+        </center>
+    </BorderPane>
+
+    <Pane prefWidth="340" prefHeight="630"
+          style="-fx-background-color: #00000060"/>
+
+    <Label id="name" textFill="white" alignment="CENTER"
+           minWidth="340" maxWidth="340"
+           text="USERNAME"
+           style="-fx-font-size: 20; -fx-font-family: MyFontBold;"
+           layoutY="100"/>
+
+    <Label id="status" textFill="white" alignment="CENTER"
+           minWidth="340" maxWidth="340"
+           text="Ringing..."
+           style="-fx-font-size: 17; -fx-font-family: MyFontBold;"
+           layoutY="130"/>
+
+
+    <Label id="btn"
+           alignment="CENTER"
+           layoutX="140"
+           layoutY="530"
+           styleClass="call"
+           style="-fx-background-color: red;"
+           prefWidth="60" prefHeight="60"/>
+
+    <JFXRippler id="ripple" layoutX="140" styleClass="jfx-rippler2"
+                layoutY="530">
+        <Label prefWidth="60" prefHeight="60"/>
+    </JFXRippler>
+
+    <Label id="hide" textFill="white" alignment="CENTER"
+           style="-fx-background-color: #FFFFFF40; -fx-background-radius: 100;"
+           minWidth="16" maxWidth="16" minHeight="16" maxHeight="16"
+           layoutY="12" layoutX="12"/>
+
+    <Label id="btn_answer" visible="false"
+           alignment="CENTER"
+           layoutX="240"
+           layoutY="530"
+           styleClass="call"
+           style="-fx-background-color: #339966;"
+           prefWidth="60" prefHeight="60"/>
+
+    <JFXRippler id="ripple_answer" visible="false"
+                layoutX="240" styleClass="jfx-rippler2"
+                layoutY="530">
+        <Label prefWidth="60" prefHeight="60"/>
+    </JFXRippler>
+
+</AnchorPane>

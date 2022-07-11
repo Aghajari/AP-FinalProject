@@ -1,0 +1,55 @@
+<LinearLayout android:id="@+id/username_click"
+    android:tag="username"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:paddingHorizontal="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_gravity="center_vertical"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:srcCompat="@drawable/gradient2_rad"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/text"
+        android:gravity="center_vertical|left"
+        android:layout_marginLeft="21dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/regular"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/next"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/next_tv"
+            android:gravity="center"
+            android:layout_marginRight="12dp"
+            android:textSize="14sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:text="\ue5e1"
+            android:textSize="18sp"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/materialicons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</LinearLayout>

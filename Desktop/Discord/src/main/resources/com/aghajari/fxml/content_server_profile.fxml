@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <MFXScrollPane prefHeight="630" prefWidth="595">
+        <AnchorPane prefWidth="580">
+            <padding>
+                <Insets bottom="24"/>
+            </padding>
+
+            <AnchorPane prefWidth="537" prefHeight="400"
+                        layoutY="24" layoutX="24"
+                        style="-fx-background-radius: 16; -fx-background-color: #202225;">
+
+                <Pane id="bg" styleClass="header_bg"
+                      layoutX="2" layoutY="2" prefWidth="533" prefHeight="98"/>
+
+                <Pane style="-fx-background-color: #202225; -fx-background-radius: 90;"
+                      prefWidth="90" prefHeight="90"
+                      layoutX="24" layoutY="75"/>
+
+                <ImageView id="avatar" layoutX="29" layoutY="80"
+                           fitWidth="80" fitHeight="80"/>
+
+                <Label id="close" style="-fx-background-color: #202225; -fx-background-radius: 90;"
+                       prefWidth="40" prefHeight="40"
+                       layoutX="473" layoutY="83"/>
+
+                <JFXRippler id="close_ripple"
+                            layoutX="473" styleClass="jfx-rippler2"
+                            layoutY="83">
+                    <Label prefWidth="40" prefHeight="40"/>
+                </JFXRippler>
+
+                <Label id="avatar_edit" layoutX="29" layoutY="80"
+                       prefWidth="80" prefHeight="80"
+                       alignment="CENTER" visible="false"
+                       text="Edit"
+                       textFill="white"
+                       style="-fx-background-color: #00000080; -fx-background-radius: 80; -fx-font-size: 20;"/>
+
+                <Label layoutY="108" layoutX="124"
+                       id="name"
+                       textFill="white"
+                       style="-fx-font-family: MyFontBold; -fx-font-size: 22"/>
+
+                <AnchorPane style="-fx-background-color: #2F3136; -fx-background-radius: 16"
+                            prefWidth="513" prefHeight="208"
+                            layoutX="12" layoutY="180">
+
+                    <VBox spacing="16" layoutX="16" layoutY="12" prefWidth="481" prefHeight="176"
+                          alignment="CENTER_LEFT">
+                        <HBox spacing="20">
+                            <VBox spacing="4" maxWidth="310" minWidth="310">
+                                <Label textFill="gray" text="INVITE CODE"
+                                       style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                                <Label id="code" textFill="white" style="-fx-font-size: 16;"/>
+                            </VBox>
+
+                            <MFXButton id="revoke"
+                                       translateY="1"
+                                       styleClass="mfx-button2"
+                                       buttonType="RAISED"
+                                       minHeight="35.0" minWidth="70.0"
+                                       text="Revoke"/>
+
+                            <MFXButton id="copy"
+                                       translateY="1"
+                                       styleClass="mfx-button2"
+                                       buttonType="RAISED"
+                                       minHeight="35.0" minWidth="60.0"
+                                       text="Copy"/>
+                        </HBox>
+
+                        <HBox spacing="20">
+                            <VBox spacing="4" maxWidth="400" minWidth="400">
+                                <Label textFill="gray" text="NAME"
+                                       style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                                <Label id="server_name" textFill="white" style="-fx-font-size: 16;"/>
+                            </VBox>
+
+                            <MFXButton id="edit"
+                                       translateY="1"
+                                       styleClass="mfx-button2"
+                                       buttonType="RAISED"
+                                       minHeight="35.0" minWidth="60.0"
+                                       text="Edit"/>
+                        </HBox>
+
+                        <VBox spacing="5">
+                            <Label textFill="gray" text="OWNER"
+                                   style="-fx-font-size: 14; -fx-font-family: MyFontBold;"/>
+                            <HBox spacing="5" alignment="CENTER_LEFT">
+                                <ImageView id="owner_img" fitWidth="20" fitHeight="20"/>
+                                <Label id="owner" textFill="white" style="-fx-font-size: 16;"/>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                </AnchorPane>
+            </AnchorPane>
+
+            <AnchorPane id="permissions" prefWidth="537"
+                        layoutY="448" layoutX="24"
+                        style="-fx-background-radius: 16; -fx-background-color: #202225;"
+                        visible="false">
+
+                <padding>
+                    <Insets bottom="12"/>
+                </padding>
+
+                <Label layoutY="24" layoutX="24"
+                       id="name"
+                       text="Permissions"
+                       textFill="white"
+                       style="-fx-font-family: MyFontBold; -fx-font-size: 22"/>
+
+                <VBox spacing="12" layoutX="12" layoutY="78">
+                    <AnchorPane style="-fx-background-color: #2F3136; -fx-background-radius: 16"
+                                prefWidth="513" prefHeight="50">
+                        <Label layoutX="16" alignment="CENTER" prefHeight="50"
+                               text="Send Messages" textFill="white"
+                               style="-fx-font-size: 16; -fx-font-family: MyFontBold;"/>
+
+                        <MFXToggleButton id="p1" layoutX="445" layoutY="4"/>
+                    </AnchorPane>
+
+                    <AnchorPane style="-fx-background-color: #2F3136; -fx-background-radius: 16"
+                                prefWidth="513" prefHeight="50">
+                        <Label layoutX="16" alignment="CENTER" prefHeight="50"
+                               text="See Invite Code" textFill="white"
+                               style="-fx-font-size: 16; -fx-font-family: MyFontBold;"/>
+
+                        <MFXToggleButton id="p2" layoutX="445" layoutY="4"/>
+                    </AnchorPane>
+
+                    <AnchorPane style="-fx-background-color: #2F3136; -fx-background-radius: 16"
+                                prefWidth="513" prefHeight="50">
+                        <Label layoutX="16" alignment="CENTER" prefHeight="50"
+                               text="Change Server Profile" textFill="white"
+                               style="-fx-font-size: 16; -fx-font-family: MyFontBold;"/>
+
+                        <MFXToggleButton id="p3" layoutX="445" layoutY="4"/>
+                    </AnchorPane>
+
+                    <AnchorPane style="-fx-background-color: #2F3136; -fx-background-radius: 16"
+                                prefWidth="513" prefHeight="50">
+                        <Label layoutX="16" alignment="CENTER" prefHeight="50"
+                               text="Change Server Name" textFill="white"
+                               style="-fx-font-size: 16; -fx-font-family: MyFontBold;"/>
+
+                        <MFXToggleButton id="p4" layoutX="445" layoutY="4"/>
+                    </AnchorPane>
+                </VBox>
+
+            </AnchorPane>
+        </AnchorPane>
+    </MFXScrollPane>
+</AnchorPane>

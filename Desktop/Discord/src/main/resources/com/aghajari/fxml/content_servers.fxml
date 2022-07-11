@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<AnchorPane prefHeight="630" prefWidth="585" xmlns="http://javafx.com/javafx/11.0.14-internal">
+
+    <Pane prefHeight="1" prefWidth="537" layoutX="24" layoutY="34"
+          style="-fx-background-color: #202225;"/>
+
+    <Label layoutX="36" layoutY="27" text="JOIN A SERVER" style="-fx-font-size: 11; -fx-background-color: #37393E;"
+        textFill="white">
+        <padding>
+            <Insets left="12" right="12"/>
+        </padding>
+    </Label>
+
+    <AnchorPane layoutX="24" layoutY="56" prefWidth="537" prefHeight="56"
+                style="-fx-background-color: #2F3136; -fx-background-radius: 12;">
+
+        <TextField id="code" promptText="Invite Code" layoutX="12" layoutY="12"
+                   minWidth="513" maxWidth="513" prefHeight="32"
+                   style="-fx-prompt-text-fill: gray; -fx-background-color: transparent;
+         -fx-text-fill: white; -fx-font-size: 18; -fx-font-family: MyFont"/>
+
+        <AnchorPane id="join"
+                    layoutY="8" layoutX="485"
+                    visible="false">
+            <Label id="btn_join"
+                   alignment="CENTER"
+                   styleClass="shadow"
+                   style="-fx-background-color: #5C64EA;"
+                   prefWidth="40" prefHeight="40"/>
+
+            <JFXRippler id="ripple_join"
+                        styleClass="jfx-rippler2">
+                <Label prefWidth="40" prefHeight="40"/>
+            </JFXRippler>
+        </AnchorPane>
+
+    </AnchorPane>
+
+    <Label textFill="gray" text="Enter an invite code to join an existing server."
+        layoutX="36" layoutY="124" style="-fx-font-size: 14"/>
+
+    <Pane prefHeight="1" prefWidth="537" layoutX="24" layoutY="168"
+          style="-fx-background-color: #202225;"/>
+
+    <Label layoutX="36" layoutY="161" text="CREATE A SERVER" style="-fx-font-size: 11; -fx-background-color: #37393E;"
+           textFill="white">
+        <padding>
+            <Insets left="12" right="12"/>
+        </padding>
+    </Label>
+
+    <Label textFill="gray" text="Create your own server and invite your friends to join it."
+           layoutX="36" layoutY="190" style="-fx-font-size: 14"/>
+
+    <ImageView id="img" layoutX="242" layoutY="250" fitWidth="100" fitHeight="100">
+        <Image url="@../upload.png"/>
+    </ImageView>
+
+    <Label textFill="gray" text="By creating a server, you agree to Discord's Community Guidelines"
+           layoutX="36" layoutY="458" style="-fx-font-size: 14"/>
+
+    <AnchorPane layoutX="24" layoutY="390" prefWidth="537" prefHeight="56"
+                style="-fx-background-color: #2F3136; -fx-background-radius: 12;">
+
+        <TextField id="name" promptText="Server Name" layoutX="12" layoutY="12"
+                   minWidth="513" maxWidth="513" prefHeight="32"
+                   style="-fx-prompt-text-fill: gray; -fx-background-color: transparent;
+         -fx-text-fill: white; -fx-font-size: 18; -fx-font-family: MyFont"/>
+
+        <AnchorPane id="create"
+                    layoutY="8" layoutX="485"
+                    visible="false">
+            <Label id="btn_create"
+                   alignment="CENTER"
+                   styleClass="shadow"
+                   style="-fx-background-color: #5C64EA;"
+                   prefWidth="40" prefHeight="40"/>
+
+            <JFXRippler id="ripple_create"
+                        styleClass="jfx-rippler2">
+                <Label prefWidth="40" prefHeight="40"/>
+            </JFXRippler>
+        </AnchorPane>
+
+        <MFXProgressSpinner visible="false" id="loading" layoutY="6" layoutX="482"
+                            prefWidth="44" prefHeight="44"/>
+    </AnchorPane>
+</AnchorPane>
