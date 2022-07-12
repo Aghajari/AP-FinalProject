@@ -59,6 +59,8 @@ A bot is only an HTTP api link, You can develop the api in all programming langu
 
 ![](./images/7.png)
 
+![](./images/9.png)
+
 This one is a "Hello World!" bot code written in PHP.<br>
 ```PHP
 <?php
@@ -74,7 +76,7 @@ echo json_encode([
 ?>
 ```
 
-[dictionary.php](./Bot/dictionary.php) source code.
+[See more...](./Bot)
 
 <details><summary><b>Bot Api Document</b></summary>
 <p>
