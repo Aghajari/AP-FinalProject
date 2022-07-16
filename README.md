@@ -25,6 +25,8 @@ This is my final project for Advanced-Programming (AP) in Amirkabir University o
 
 
 **Video:**<br>
+https://user-images.githubusercontent.com/30867537/179339193-f0e99cfe-18a3-49b1-8175-c14edad66437.mp4
+
 [This video](./video.mp4) shows the performance of the application in both Android and desktop versions.<br>
 It also displays smooth animations.
 
