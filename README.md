@@ -47,7 +47,7 @@ Change `SERVER_PORT` in `ApiService.java` [Server](./Server/DiscordServer/src/ma
 
 **Installation:**<br>
 - Api (Node.js)
-  + Replace `YOUR-DOMAIN.com` with your domain address in [.env](Server/Api/app.js)
+  + Replace `YOUR-DOMAIN.com` with your domain address in [app.js](Server/Api/app.js)
   + Change `jwt_secret` in [.env](Server/Api/.env) (Something random and secure)
   + Install npm packages: `npm install`
   + Run project: `node app.js`
