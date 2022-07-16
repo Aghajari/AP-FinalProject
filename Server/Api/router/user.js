@@ -258,7 +258,7 @@ router.post("/register", async (req, res) => {
                 email: req.body.email,
                 nickname: req.body.nickname,
                 password: hashedPassword,
-                avatar: `https://qbeesoft.com/uploads/avatar.png`
+                avatar: ``
             });
 
             const savedUser = await newUser.save();
