@@ -1,0 +1,185 @@
+com/aghajari/shared/models/OpenedChatModel.java
+ com.aghajari.shared.models.OpenedChatModel
+com/aghajari/dialogs/LogoutDialog.java
+ com.aghajari.dialogs.LogoutDialog
+com/aghajari/adapters/ProfileItemAdapter.java
+ com.aghajari.adapters.ProfileItemAdapter
+ com.aghajari.adapters.ProfileItemAdapter$1
+ com.aghajari.adapters.ProfileItemAdapter$Item
+ com.aghajari.adapters.ProfileItemAdapter$ItemClick
+ com.aghajari.adapters.ProfileItemAdapter$ItemDivider
+ com.aghajari.adapters.ProfileItemAdapter$ItemInfo
+ com.aghajari.adapters.ProfileItemAdapter$ItemOwner
+ com.aghajari.adapters.ProfileItemAdapter$ItemTitle
+com/aghajari/shared/models/RequestToJoinServer.java
+ com.aghajari.shared.models.RequestToJoinServer
+com/aghajari/views/EmptyView.java
+ com.aghajari.views.EmptyView
+ com.aghajari.views.EmptyView$Type
+com/aghajari/fragments/BotFragment.java
+ com.aghajari.fragments.BotFragment
+com/aghajari/MainActivity.java
+ com.aghajari.MainActivity
+ com.aghajari.MainActivity$1
+ com.aghajari.MainActivity$2
+ com.aghajari.MainActivity$3
+ com.aghajari.MainActivity$4
+com/aghajari/store/StaticListeners.java
+ com.aghajari.store.StaticListeners
+ com.aghajari.store.StaticListeners$GenericUpdater
+ com.aghajari.store.StaticListeners$Updater
+com/aghajari/fragments/HomeFragment.java
+ com.aghajari.fragments.HomeFragment
+com/aghajari/views/Utils.java
+ com.aghajari.views.Utils
+ com.aghajari.views.Utils$1
+ com.aghajari.views.Utils$2
+ com.aghajari.views.Utils$ColorThread
+ com.aghajari.views.Utils$Consumer
+com/aghajari/api/ApiService.java
+ com.aghajari.api.ApiService
+ com.aghajari.api.ApiService$Callback
+ com.aghajari.api.ApiService$RetrofitCallback
+com/aghajari/fragments/QRScannerFragment.java
+ com.aghajari.fragments.QRScannerFragment
+com/aghajari/api/SocketApi.java
+ com.aghajari.api.SocketApi
+ com.aghajari.api.SocketApi$InputHandler
+ com.aghajari.api.SocketApi$Listener
+com/aghajari/adapters/DesignServerAdapter.java
+ com.aghajari.adapters.DesignServerAdapter
+ com.aghajari.adapters.DesignServerAdapter$1
+com/aghajari/BuildConfig.java
+ com.aghajari.BuildConfig
+com/aghajari/api/Api.java
+ com.aghajari.api.Api
+com/aghajari/dialogs/DeleteOrLeaveDialog.java
+ com.aghajari.dialogs.DeleteOrLeaveDialog
+com/aghajari/fragments/ChangePasswordFragment.java
+ com.aghajari.fragments.ChangePasswordFragment
+ com.aghajari.fragments.ChangePasswordFragment$1
+com/aghajari/fragments/PermissionsFragment.java
+ com.aghajari.fragments.PermissionsFragment
+com/aghajari/fragments/DevicesFragment.java
+ com.aghajari.fragments.DevicesFragment
+com/aghajari/adapters/ChatAdapter.java
+ com.aghajari.adapters.ChatAdapter
+ com.aghajari.adapters.ChatAdapter$1
+ com.aghajari.adapters.ChatAdapter$IndexedLinkedHashMap
+ com.aghajari.adapters.ChatAdapter$MessageInfo
+com/aghajari/adapters/SearchUsersAdapter.java
+ com.aghajari.adapters.SearchUsersAdapter
+ com.aghajari.adapters.SearchUsersAdapter$1
+com/aghajari/shared/models/FriendshipModel.java
+ com.aghajari.shared.models.FriendshipModel
+com/aghajari/adapters/MyChatsAdapter.java
+ com.aghajari.adapters.MyChatsAdapter
+com/aghajari/fragments/BaseFragment.java
+ com.aghajari.fragments.BaseFragment
+com/aghajari/views/KeyboardHeightProvider.java
+ com.aghajari.views.KeyboardHeightProvider
+ com.aghajari.views.KeyboardHeightProvider$1
+ com.aghajari.views.KeyboardHeightProvider$OnKeyboardHeightChanged
+com/aghajari/views/LoadingButton.java
+ com.aghajari.views.LoadingButton
+com/aghajari/fragments/EditUsernameFragment.java
+ com.aghajari.fragments.EditUsernameFragment
+ com.aghajari.fragments.EditUsernameFragment$1
+com/aghajari/shared/models/IDModel.java
+ com.aghajari.shared.models.IDModel
+com/aghajari/shared/ChatsList.java
+ com.aghajari.shared.ChatsList
+com/aghajari/Application.java
+ com.aghajari.Application
+com/aghajari/dialogs/TerminateDeviceDialog.java
+ com.aghajari.dialogs.TerminateDeviceDialog
+com/aghajari/fragments/ProfileFragment.java
+ com.aghajari.fragments.ProfileFragment
+ com.aghajari.fragments.ProfileFragment$1
+ com.aghajari.fragments.ProfileFragment$2
+ com.aghajari.fragments.ProfileFragment$3
+com/aghajari/adapters/BaseAdapter.java
+ com.aghajari.adapters.BaseAdapter
+ com.aghajari.adapters.BaseAdapter$VH
+com/aghajari/HomeActivity.java
+ com.aghajari.HomeActivity
+com/aghajari/store/EasyApi.java
+ com.aghajari.store.EasyApi
+ com.aghajari.store.EasyApi$1
+ com.aghajari.store.EasyApi$2
+ com.aghajari.store.EasyApi$3
+ com.aghajari.store.EasyApi$4
+com/aghajari/fragments/DesignServerFragment.java
+ com.aghajari.fragments.DesignServerFragment
+ com.aghajari.fragments.DesignServerFragment$1
+com/aghajari/fragments/ListFragment.java
+ com.aghajari.fragments.ListFragment
+com/aghajari/models/BaseApiModel.java
+ com.aghajari.models.BaseApiModel
+com/aghajari/models/UploadAvatarModel.java
+ com.aghajari.models.UploadAvatarModel
+com/aghajari/shared/models/ServerModel.java
+ com.aghajari.shared.models.ServerModel
+ com.aghajari.shared.models.ServerModel$ServerChannel
+com/aghajari/shared/models/FriendshipRequestModel.java
+ com.aghajari.shared.models.FriendshipRequestModel
+com/aghajari/adapters/DevicesAdapter.java
+ com.aghajari.adapters.DevicesAdapter
+com/aghajari/shared/Profile.java
+ com.aghajari.shared.Profile
+com/aghajari/models/ChangePasswordModel.java
+ com.aghajari.models.ChangePasswordModel
+com/aghajari/views/ClipFrameLayout.java
+ com.aghajari.views.ClipFrameLayout
+com/aghajari/shared/models/UserModel.java
+ com.aghajari.shared.models.UserModel
+com/aghajari/fragments/ChatFragment.java
+ com.aghajari.fragments.ChatFragment
+ com.aghajari.fragments.ChatFragment$1
+ com.aghajari.fragments.ChatFragment$ReactionView
+ com.aghajari.fragments.ChatFragment$ReactionView$1
+ com.aghajari.fragments.ChatFragment$ReactionView$Adapter
+com/aghajari/adapters/ListAdapter.java
+ com.aghajari.adapters.ListAdapter
+ com.aghajari.adapters.ListAdapter$1
+com/aghajari/models/LoginModel.java
+ com.aghajari.models.LoginModel
+com/aghajari/models/MyInfo.java
+ com.aghajari.models.MyInfo
+com/aghajari/adapters/ServerMembersAdapter.java
+ com.aghajari.adapters.ServerMembersAdapter
+ com.aghajari.adapters.ServerMembersAdapter$1
+com/aghajari/views/PermissionUtils.java
+ com.aghajari.views.PermissionUtils
+com/aghajari/adapters/PermissionsAdapter.java
+ com.aghajari.adapters.PermissionsAdapter
+ com.aghajari.adapters.PermissionsAdapter$Item
+com/aghajari/shared/SocketModel.java
+ com.aghajari.shared.SocketModel
+com/aghajari/fragments/InviteCodeFragment.java
+ com.aghajari.fragments.InviteCodeFragment
+com/aghajari/shared/models/IsTypingModel.java
+ com.aghajari.shared.models.IsTypingModel
+ com.aghajari.shared.models.IsTypingModel$IsTypingResponse
+com/aghajari/shared/SocketEvents.java
+ com.aghajari.shared.SocketEvents
+com/aghajari/models/SearchUsers.java
+ com.aghajari.models.SearchUsers
+com/aghajari/store/SocketListeners.java
+ com.aghajari.store.SocketListeners
+com/aghajari/shared/models/DeviceInfo.java
+ com.aghajari.shared.models.DeviceInfo
+com/aghajari/shared/models/SoundModel.java
+ com.aghajari.shared.models.SoundModel
+com/aghajari/adapters/MemberPermissionsAdapter.java
+ com.aghajari.adapters.MemberPermissionsAdapter
+ com.aghajari.adapters.MemberPermissionsAdapter$Item
+com/aghajari/fragments/ServersFragment.java
+ com.aghajari.fragments.ServersFragment
+ com.aghajari.fragments.ServersFragment$1
+ com.aghajari.fragments.ServersFragment$2
+ com.aghajari.fragments.ServersFragment$3
+com/aghajari/shared/models/MessageModel.java
+ com.aghajari.shared.models.MessageModel
+com/aghajari/shared/IDFinder.java
+ com.aghajari.shared.IDFinder
