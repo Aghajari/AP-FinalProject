@@ -1,5 +1,5 @@
 # AP-FinalProject
- A messaging social platform based on Discord for Desktop and Android.<br>
+ A secure messaging social platform based on Discord for Desktop and Android.<br>
 This is my final project for Advanced-Programming (AP) in Amirkabir University of Technology (AUT).<br>
 
 ![](./images/1.png)
@@ -13,16 +13,59 @@ This is my final project for Advanced-Programming (AP) in Amirkabir University o
 - **MongoDB** And **MySQL** for Database
 
 **Libraries Used:**<br>
-- [XmlByPass](https://github.com/Aghajari/XmlByPass)
-- [AXAnimation](https://github.com/Aghajari/AXAnimation)
-- [AXrLottie](https://github.com/Aghajari/AXrLottie)
-- [Retrofit](https://github.com/square/retrofit)
-- [Gson](https://github.com/google/gson)
-- [ZXing](https://github.com/zxing/zxing)
-- [MaterialFX](https://github.com/palexdev/MaterialFX)
-- [Mongoose](https://github.com/Automattic/mongoose)
-- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+- [XmlByPass](https://github.com/Aghajari/XmlByPass) (Android)
+- [AXAnimation](https://github.com/Aghajari/AXAnimation) (Android)
+- [AXrLottie](https://github.com/Aghajari/AXrLottie) (Android)
+- [Retrofit](https://github.com/square/retrofit) (All)
+- [Gson](https://github.com/google/gson) (All)
+- [ZXing](https://github.com/zxing/zxing) (Desktop)
+- [MaterialFX](https://github.com/palexdev/MaterialFX) (Desktop)
+- [Mongoose](https://github.com/Automattic/mongoose) (Node.js)
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) (Node.js)
 
+
+**Video:**<br>
+[This video](./video.mp4) shows the performance of the application in both Android and desktop versions.<br>
+It also displays smooth animations.
+
+**Desktop:**<br>
+The desktop version has been tested on Mac (OS X) and Windows (10)<br>
+
+**Android:**<br>
+The Android version is written in Java,<br>
+I tested [XmlByPass](https://github.com/Aghajari/XmlByPass) in this project and it came out proud
+
+**Port:**<br>
+- **Api** (Node.js) runs on `3154` by default.<br>
+Change `port` in [.env](Server/Api/.env)<br>
+Make sure to change port of `API_ADDRESS` in `ApiService.java` too.<br>
+- **ServerSocket** runs on `2424` by default.<br>
+Change `SERVER_PORT` in `ApiService.java` [Server](./Server/DiscordServer/src/main/java/com/aghajari/api/ApiService.java), [Desktop](./Desktop/Discord/src/main/java/com/aghajari/api/ApiService.java), [Android](./Android/Discord/app/src/main/java/com/aghajari/api/ApiService.java)
+
+**Installation:**<br>
+- Api (Node.js)
+  + Replace `YOUR-DOMAIN.com` with your domain address in [.env](Server/Api/app.js)
+  + Change `jwt_secret` in [.env](Server/Api/.env) (Something random and secure)
+  + Install npm packages: `npm install`
+  + Run project: `node app.js`
+
+- Server
+  + Install [MySQL](https://dev.mysql.com/downloads/mysql/)
+  + Import [database.sql](./Server/database.sql) to MySQL
+  + Replace address of api with `API_ADDRESS` in [ApiService.java](./Server/DiscordServer/src/main/java/com/aghajari/api/ApiService.java)
+  + Run [Project](./Server/DiscordServer)
+  
+- Desktop
+  + Replace address of api with `API_ADDRESS` in [ApiService.java](./Desktop/Discord/src/main/java/com/aghajari/api/ApiService.java)
+  + Replace address of socket with `SOCKET_IP` in [ApiService.java](./Desktop/Discord/src/main/java/com/aghajari/api/ApiService.java)
+  + Set yor os type in [pom.xml](./Desktop/Discord/pom.xml). `<os>?</os>` : `mac`, `linux`, `win` and `win-x86`
+  + Run [Project](./Desktop/Discord)
+  
+- Android
+  + Replace address of api with `API_ADDRESS` in [ApiService.java](./Android/Discord/app/src/main/java/com/aghajari/api/ApiService.java)
+  + Replace address of socket with `SOCKET_IP` in [ApiService.java](./Android/Discord/app/src/main/java/com/aghajari/api/ApiService.java)
+  + Run [Project](./Android/Discord)
+  
 ## Chat Page
 These are some screen shots of PrivateMessage and Server's GroupChat.<br>
 Reactions are lottie animations from telegram emoji set.
