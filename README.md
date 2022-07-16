@@ -61,7 +61,7 @@ Change `SERVER_PORT` in `ApiService.java` [Server](./Server/DiscordServer/src/ma
 - Desktop
   + Replace address of api with `API_ADDRESS` in [ApiService.java](./Desktop/Discord/src/main/java/com/aghajari/api/ApiService.java)
   + Replace address of socket with `SOCKET_IP` in [ApiService.java](./Desktop/Discord/src/main/java/com/aghajari/api/ApiService.java)
-  + Set yor os type in [pom.xml](./Desktop/Discord/pom.xml). `<os>?</os>` : `mac`, `linux`, `win` and `win-x86`
+  + Set your os type in [pom.xml](./Desktop/Discord/pom.xml). `<os>?</os>` : `mac`, `linux`, `win` and `win-x86`
   + Run [Project](./Desktop/Discord)
   
 - Android
